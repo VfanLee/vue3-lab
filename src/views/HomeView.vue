@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref } from 'vue'
+
+const calendarValue = ref(new Date())
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="home">
+    <h2>{{ $t('home') }}</h2>
+
+    <section>
+      <el-calendar v-model="calendarValue" />
+    </section>
+  </div>
 </template>
