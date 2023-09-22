@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
+import i18n from './i18n'
 import store from './store'
 import router from './router'
-import i18n from './i18n'
 
 import 'element-plus/dist/index.css'
 
@@ -10,9 +10,9 @@ import ElementPlus from 'element-plus'
 
 const app = createApp(App)
 
+app.use(i18n)
 app.use(store)
 app.use(router)
-app.use(i18n)
 app.use(ElementPlus)
 
 app.mount('#app')
