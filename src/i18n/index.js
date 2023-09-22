@@ -10,7 +10,7 @@ const messages = {
   ar
 }
 
-function getDefaultLocale() {
+function getDefaultLang() {
   const cacheLang = getCacheLang()
   if (cacheLang) {
     return cacheLang
@@ -31,7 +31,7 @@ function getDefaultLocale() {
 
 const i18n = createI18n({
   legacy: false,
-  locale: getDefaultLocale(),
+  locale: getDefaultLang(),
   fallbackLocale: 'zh',
   messages
 })

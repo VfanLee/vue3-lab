@@ -1,17 +1,16 @@
 <script setup>
 import { computed } from 'vue'
+import useLangStore from './store/modules/lang'
 import { RouterLink, RouterView } from 'vue-router'
 import elementZh from 'element-plus/dist/locale/zh-cn.min.mjs'
 import elementEn from 'element-plus/dist/locale/en.min.mjs'
 import elementAr from 'element-plus/dist/locale/ar.min.mjs'
-import useLocaleStore from './store/modules/locale'
-
 import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
 
-const localeStore = useLocaleStore()
+const langStore = useLangStore()
 
 const locale = computed(() => {
-  switch (localeStore.currentLang) {
+  switch (langStore.currentLang) {
     case 'zh':
       return elementZh
     case 'en':

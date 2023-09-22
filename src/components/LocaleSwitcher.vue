@@ -1,16 +1,16 @@
 <script setup>
 import { ref } from 'vue'
-import useLocaleStore from '@/store/modules/locale'
-import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import useLangStore from '@/store/modules/lang'
+import { useRoute } from 'vue-router'
 
-const localeStore = useLocaleStore()
+const langStore = useLangStore()
 const rotue = useRoute()
 const i18n = useI18n()
 
-const locale = ref(localeStore.currentLang)
+const locale = ref(langStore.currentLang)
 const changeLocale = value => {
-  localeStore.setLang(value)
+  langStore.setLang(value)
   i18n.locale.value = value
   document.title = i18n.t(rotue.meta.title)
 }

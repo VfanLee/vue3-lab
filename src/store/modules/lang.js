@@ -1,9 +1,9 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { setCacheLang } from '@/utils/locale'
 import i18n from '@/i18n'
+import { setCacheLang } from '@/utils/locale'
 
-const useLocaleStore = defineStore('locale', () => {
+const useLangStore = defineStore('lang', () => {
   const i18nLocale = i18n.global.locale.value
   if (i18nLocale === 'ar') {
     document.body.dir = 'rtl'
@@ -26,4 +26,4 @@ const useLocaleStore = defineStore('locale', () => {
   return { currentLang, setLang }
 })
 
-export default useLocaleStore
+export default useLangStore
