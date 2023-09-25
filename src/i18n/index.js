@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import { getCacheLang, setCacheLang } from '@/utils/locale'
+import { getCacheLang, setCacheLang } from '@/utils/lang'
 import zh from './lang/zh.json'
 import en from './lang/en.json'
 import ar from './lang/ar.json'

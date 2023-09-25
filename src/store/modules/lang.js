@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import i18n from '@/i18n'
-import { setCacheLang } from '@/utils/locale'
+import { setCacheLang } from '@/utils/lang'
 
 const useLangStore = defineStore('lang', () => {
   const i18nLocale = i18n.global.locale.value
