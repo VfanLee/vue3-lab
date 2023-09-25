@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import elementZh from 'element-plus/dist/locale/zh-cn.min.mjs'
 import elementEn from 'element-plus/dist/locale/en.min.mjs'
 import elementAr from 'element-plus/dist/locale/ar.min.mjs'
-import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
+import LangSwitcher from '@/components/LangSwitcher.vue'
 
 const langStore = useLangStore()
 
@@ -30,7 +30,7 @@ const locale = computed(() => {
     <RouterLink to="/about">{{ $t('about') }}</RouterLink>
   </nav>
 
-  <LocaleSwitcher />
+  <LangSwitcher />
 
   <el-config-provider :locale="locale">
     <RouterView />
