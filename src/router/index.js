@@ -1,18 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/home.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: Home
+      component: () => import('@/views/home.vue')
     },
     {
       path: '/tinymce',
-      name: 'tinymce',
-      component: () => import('@/views/tinymce.vue')
+      name: 'tinymceView',
+      component: () => import('@/views/tinymce-view.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/home'
     }
   ]
 })
