@@ -14,6 +14,11 @@ const router = createRouter({
       component: () => import('@/views/tinymce-view.vue')
     },
     {
+      path: '/input',
+      name: 'inputView',
+      component: () => import('@/views/input-view.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       redirect: '/home'
     }
