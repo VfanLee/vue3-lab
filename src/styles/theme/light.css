@@ -1,0 +1,26 @@
+/* base */
+body.light {
+  --text-color: #303133;
+  --background-color: #fff;
+  --primary-color: var(--purple-6);
+}
+
+/* element */
+body.light {
+  --el-color-primary: var(--primary-color);
+  --el-color-primary-light-3: var(--purple-4);
+  --el-color-primary-light-7: var(--purple-3);
+  --el-color-primary-light-9: var(--purple-2);
+  --el-color-primary-dark-2: var(--purple-7);
+  --el-fill-color-blank: #fff;
+  --el-border-color: #dcdfe6;
+}
+
+/* custom */
+body.light .card__container {
+  --card-background-color: #fff;
+  --card-border-color: #e4e7ed;
+  --card-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  --card-title-color: var(--primary-color);
+  --card-content-color: #303133;
+}

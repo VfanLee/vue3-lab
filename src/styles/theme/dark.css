@@ -1,0 +1,26 @@
+/* base */
+body.dark {
+  --text-color: #e5eaf3;
+  --background-color: #141414;
+  --primary-color: var(--orange-6);
+}
+
+/* element */
+body.dark {
+  --el-color-primary: var(--primary-color);
+  --el-color-primary-light-3: var(--orange-7);
+  --el-color-primary-light-7: var(--orange-8);
+  --el-color-primary-light-9: var(--orange-3);
+  --el-color-primary-dark-2: var(--orange-2);
+  --el-fill-color-blank: transparent;
+  --el-border-color: #4c4d4f;
+}
+
+/* custom */
+body.dark .card__container {
+  --card-background-color: #1d1e1f;
+  --card-border-color: #414243;
+  --card-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.72);
+  --card-title-color: var(--primary-color);
+  --card-content-color: #e5eaf3;
+}
