@@ -4,7 +4,10 @@
   <div class="card__container">
     <div class="card__title">Lorem</div>
     <img src="https://picsum.photos/200" alt="img" />
-    <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, sequi?</div>
+    <div class="card__content">
+      <a href="#">Lorem</a>
+      ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, sequi?
+    </div>
   </div>
 </template>
 

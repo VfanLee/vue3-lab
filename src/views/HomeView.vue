@@ -16,16 +16,51 @@ const changeTheme = e => {
 const changePrimaryColor = e => {
   document.body.style.setProperty('--primary-color', e.target.value)
 }
+
+const changeCardBackgroundColor = e => {
+  document.querySelector('.card__container').style.setProperty('--card-background-color', e.target.value)
+}
+
+const changeCardTitleColor = e => {
+  document.querySelector('.card__container').style.setProperty('--card-title-color', e.target.value)
+}
+
+const changeCardContentColor = e => {
+  document.querySelector('.card__container').style.setProperty('--card-content-color', e.target.value)
+}
 </script>
 
 <template>
   <main class="home__container">
     <section class="theme__container">
-      <select class="theme__select" v-model="theme" @change="changeTheme">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-      <input class="theme__input" type="color" v-model="primaryColor" @change="changePrimaryColor" />
+      <div class="theme__inline">
+        <h3>内置主题</h3>
+        <select class="theme__select" v-model="theme" @change="changeTheme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <div class="theme__custom">
+        <h3>用户自定义</h3>
+        <div>
+          主色调：
+          <input class="theme__input" type="color" v-model="primaryColor" @change="changePrimaryColor" />
+        </div>
+        <p>--- 卡片 ---</p>
+        <div>
+          卡片背景颜色：
+          <input class="theme__input" type="color" v-model="cardBackgroundColor" @change="changeCardBackgroundColor" />
+        </div>
+        <div>
+          卡片标题颜色：
+          <input class="theme__input" type="color" v-model="cardContentColor" @change="changeCardTitleColor" />
+        </div>
+        <div>
+          卡片内容颜色：
+          <input class="theme__input" type="color" v-model="cardContentColor" @change="changeCardContentColor" />
+        </div>
+      </div>
     </section>
 
     <section class="view__section">
@@ -52,13 +87,9 @@ const changePrimaryColor = e => {
   background-color: var(--background-color);
 
   .theme__container {
-    width: 520px;
-    padding: 20px;
-    text-align: center;
-
-    .theme__input {
-      margin-left: 20px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .view__section {
