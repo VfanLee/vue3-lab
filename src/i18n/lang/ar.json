@@ -1,5 +1,5 @@
 {
   "home": "الصفحة الأمامية",
   "about": "عن",
-  "todayis": "اليوم هو {date}"
+  "currentTime": "الوقت الحالي:{time}"
 }

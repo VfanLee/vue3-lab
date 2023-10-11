@@ -1,5 +1,5 @@
 {
   "home": "首页",
   "about": "关于",
-  "todayis": "今天是 {date}"
+  "currentTime": "当前时间：{time}"
 }
