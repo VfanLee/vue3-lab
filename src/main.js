@@ -3,8 +3,8 @@ import i18n from './i18n'
 import store from './store'
 import router from './router'
 
-import '@/styles/var.css'
 import 'element-plus/dist/index.css'
+import '@/styles/var.css'
 
 import App from './App.vue'
 import ElementPlus from 'element-plus'
