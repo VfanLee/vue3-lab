@@ -9,14 +9,19 @@ const router = createRouter({
       component: () => import('@/views/home.vue')
     },
     {
+      path: '/reactivity',
+      name: 'reactivity',
+      component: () => import('@/views/basic/reactivity.vue')
+    },
+    {
+      path: '/model',
+      name: 'model',
+      component: () => import('@/views/basic/model.vue')
+    },
+    {
       path: '/tinymce',
       name: 'tinymceView',
       component: () => import('@/views/tinymce-view.vue')
-    },
-    {
-      path: '/input',
-      name: 'inputView',
-      component: () => import('@/views/input-view.vue')
     },
     {
       path: '/:pathMatch(.*)*',
