@@ -1,43 +1,4 @@
-import useLangStore from '@/store/modules/lang'
-
-const getLang = () => {
-  const langStore = useLangStore()
-  const lang = langStore.lang
-  if (lang === 'zh') {
-    return 'zh_CN'
-  } else {
-    return 'en'
-  }
-}
-
 export const API_KEY = '64mjv027yic3xknhs3h7m1r84i03e1r1axyzog5514kd3xih'
-
-function filePickerCallBack(callback, value, meta) {
-  if (meta.filetype == 'file') {
-  }
-
-  if (meta.filetype == 'image') {
-    const input = document.createElement('input')
-    input.setAttribute('type', 'file')
-    input.setAttribute('accept', 'image/*')
-    input.addEventListener('change', e => {
-      // do something ...
-      callback('https://picsum.photos/100')
-    })
-    input.click()
-  }
-
-  if (meta.filetype == 'media') {
-    const input = document.createElement('input')
-    input.setAttribute('type', 'file')
-    input.setAttribute('accept', 'video/*, audio/*')
-    input.addEventListener('change', e => {
-      // do something ...
-      callback('https://vjs.zencdn.net/v/oceans.mp4')
-    })
-    input.click()
-  }
-}
 
 function imagesUploadHandler(blobInfo, progress) {
   const base64 = blobInfo.base64()
@@ -56,7 +17,7 @@ function imagesUploadHandler(blobInfo, progress) {
 export const defaultConfig = {
   placeholder: '请输入内容',
   // 插件配置
-  plugins: 'quickbars searchreplace lists linkchecker autolink advlist link table image media wordcount charmap emoticons code fullscreen preview codesample directionality help',
+  plugins: 'quickbars lists advlist link table wordcount',
   height: 600,
   resize: true,
   min_height: 200,
@@ -66,21 +27,13 @@ export const defaultConfig = {
   toolbar_mode: 'sliding',
   toolbar: `undo redo |
             blocks fontfamily fontsize |
-            bold italic underline strikethrough |
-            align numlist bullist |
-            table link image media |
-            lineheight outdent indent |
-            forecolor backcolor removeformat |
-            charmap emoticons |
-            code fullscreen preview |
-            print |
-            codesample |
-            ltr rtl |
-            help`,
+            bold italic forecolor backcolor |
+            alignleft aligncenter alignright alignjustify |
+            bullist numlist outdent indent |
+            link quickimage quicktable |
+            removeformat`,
   // 快速选择
-  quickbars_selection_toolbar: `bold italic |
-                                quicklink h2 h3 blockquote |
-                                quickimage quicktable`,
+  quickbars_selection_toolbar: `bold italic quicklink quickimage quicktable`,
   // 状态栏
   statusbar: true,
   // 元素路径
@@ -88,7 +41,7 @@ export const defaultConfig = {
   // tiny 技术支持
   branding: false,
   // 语言类型
-  language: getLang(),
+  language: 'zh_CN',
   font_family_formats: `微软雅黑=Microsoft YaHei;
                         苹果苹方=PingFang SC;
                         宋体=simsun, serif;
@@ -102,10 +55,8 @@ export const defaultConfig = {
   paste_data_images: true,
   smart_paste: true,
   // 文件处理
-  file_picker_types: 'image media',
   object_resizing: true,
   resize_img_proportional: true,
-  file_picker_callback: filePickerCallBack,
   // 图片处理
   image_caption: true,
   image_advtab: true,

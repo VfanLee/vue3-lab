@@ -7,7 +7,7 @@ export default {
 <script setup>
 import { ref } from 'vue'
 import Editor from '@tinymce/tinymce-vue'
-import { apiKey, defaultConfig } from './config'
+import { API_KEY, defaultConfig } from './config'
 
 const props = defineProps({
   modelValue: {
@@ -38,7 +38,7 @@ const init = ref({
     <Editor 
       :modelValue="value"
       @update:modelValue="value => $emit('update:modelValue', value)"
-      :api-key="apiKey"
+      :api-key="API_KEY"
       :init="init"
       :disabled="disabled"
       @change="(event, editor) => $emit('change', event, editor)"
