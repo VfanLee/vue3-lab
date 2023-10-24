@@ -7,13 +7,11 @@ import 'element-plus/dist/index.css'
 import '@/styles/var.css'
 
 import App from './App.vue'
-import ElementPlus from 'element-plus'
 
 const app = createApp(App)
 
 app.use(i18n)
 app.use(store)
 app.use(router)
-app.use(ElementPlus)
 
 app.mount('#app')
