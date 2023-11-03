@@ -3,7 +3,6 @@ import { ref, watchEffect } from 'vue'
 import useThemeStore from '@/store/theme'
 import Card from '@/components/Card.vue'
 import { generateColorPalette } from '@/utils/color'
-import { ElMessage, ElMessageBox } from 'element-plus'
 
 const themeStore = useThemeStore()
 const formRef = ref(null)

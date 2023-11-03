@@ -2,7 +2,11 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 function switchTheme(theme) {
-  document.documentElement.className = theme
+  const themeList = ['light', 'dark', 'lred', 'dred']
+  themeList.forEach(x => {
+    document.documentElement.classList.remove(x)
+  })
+  document.documentElement.classList.add(theme)
   sessionStorage.setItem('theme', theme)
 }
 
