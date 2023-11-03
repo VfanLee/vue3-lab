@@ -1,9 +1,7 @@
-<script setup></script>
-
 <template>
   <div class="card__container">
     <div class="card__title">Lorem</div>
-    <!-- <img class="card__img" src="https://picsum.photos/200/100" alt="img" /> -->
+    <img class="card__img" src="https://picsum.photos/200/100" alt="img" />
     <div class="card__content">
       <a href="#">Lorem</a>
       ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi optio modi placeat! Repellat labore temporibus, quos laboriosam ea a!
