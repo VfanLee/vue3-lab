@@ -1,15 +1,13 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup>
+import HelloTitle from '@/components/HelloTitle.vue'
+import CounterButton from '@/components/CounterButton.vue'
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+const title = 'AboutView'
+</script>
+
+<template>
+  <main>
+    <HelloTitle :title="title" />
+    <CounterButton />
+  </main>
+</template>

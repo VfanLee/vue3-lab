@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import HelloTitle from '@/components/HelloTitle.vue'
+import CounterButton from '@/components/CounterButton.vue'
+
+const title = ref('HomeView')
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <HelloTitle :title="title" />
+    <CounterButton />
   </main>
 </template>
